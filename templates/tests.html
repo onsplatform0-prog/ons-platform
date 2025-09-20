@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}تقييم التوتر - منصة أونس{% endblock %}
+
+{% block content %}
+<!-- Header Section -->
+<section class="bg-gradient-to-r from-calm-green to-calm-blue py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            تقييم التوتر
+        </h1>
+        <p class="text-xl text-green-100 max-w-2xl mx-auto">
+            خذ تقييمنا السريع والسري لفهم مستويات التوتر الحالية لديك
+        </p>
+    </div>
+</section>
+
+<!-- Assessment Form -->
+<section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="text-center mb-8">
+                <i class="fas fa-clipboard-check text-calm-green text-5xl mb-4"></i>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">فحص سريع للتوتر</h2>
+                <p class="text-gray-600">أجب على هذه الأسئلة بصدق للحصول على رؤى شخصية</p>
+            </div>
+
+            <form method="POST" class="space-y-8">
+                <!-- Question 1 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-question-circle text-calm-blue ml-2"></i>
+                        كم مرة تشعر بالإرهاق بسبب عبء العمل الأكاديمي؟
+                    </h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q1" value="1" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">نادراً (1-2 مرة في الشهر)</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q1" value="2" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">أحياناً (1-2 مرة في الأسبوع)</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q1" value="3" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">كثيراً (3-4 مرات في الأسبوع)</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q1" value="4" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">كثيراً جداً (يومياً أو تقريباً يومياً)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-question-circle text-calm-blue ml-2"></i>
+                        كيف تقيم جودة نومك خلال الأسبوع الماضي؟
+                    </h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q2" value="1" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">ممتاز - أنام جيداً وأشعر بالراحة</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q2" value="2" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">جيد - معظم الوقت مريح مع مشاكل عرضية</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q2" value="3" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">متوسط - بعض الصعوبة في النوم أو الاستمرار في النوم</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q2" value="4" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">ضعيف - مشاكل نوم متكررة تؤثر على الحياة اليومية</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-question-circle text-calm-blue ml-2"></i>
+                        كم مرة تعاني من الأعراض الجسدية للتوتر (صداع، توتر عضلي، إرهاق)؟
+                    </h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q3" value="1" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">أبداً أو نادراً</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q3" value="2" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">أحياناً (مرة أو مرتين في الشهر)</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q3" value="3" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">كثيراً (مرة أو مرتين في الأسبوع)</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                            <input type="radio" name="q3" value="4" class="text-calm-blue focus:ring-calm-blue ml-3">
+                            <span class="text-gray-700">كثيراً جداً (تقريباً يومياً)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="bg-calm-green text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        احصل على نتائجي
+                    </button>
+                </div>
+            </form>
+
+            <!-- Disclaimer -->
+            <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-blue-500 mt-1 ml-3"></i>
+                    <div class="text-sm text-blue-700">
+                        <p class="font-semibold mb-1">ملاحظة مهمة:</p>
+                        <p>هذا التقييم للأغراض الإعلامية فقط وليس بديلاً عن المشورة الطبية المهنية أو التشخيص أو العلاج. إذا كنت تعاني من توتر شديد أو مخاوف صحية نفسية، يرجى استشارة أخصائي رعاية صحية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
